@@ -1,0 +1,146 @@
+.panel {
+    height: 100vh;
+    
+    /* background-color: #1A030406; */
+    /* margin: 0; */
+    /* night clear background-image: linear-gradient(180deg, #010204 0%, #002557 74%); */    
+}
+
+.headerStyle {
+    background-color:#123456;
+    margin: 0;
+}
+
+.titleBar {
+    height: auto;
+    padding: 16px;
+    z-index: -1;
+    box-shadow: 0 3px 5px -1px rgba(0,0,0,.2),0 5px 8px 0 rgba(0,0,0,.14),0 1px 14px 0 rgba(0,0,0,.12);
+    margin-bottom: 10px;
+}
+
+.regularText {
+    font-family: 'Roboto', sans-serif;
+    color: aliceblue;
+    font-size: 16px;
+}
+
+.boldText {
+    font-family: 'Roboto', sans-serif;
+    color: aliceblue;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.semiBoldText {
+    font-family: 'Roboto', sans-serif;
+    color: aliceblue;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.currentCondition {
+    height: auto;
+}
+
+.conditionImage {
+    height: 128px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.content {
+    margin: 5%;
+    margin-top: 2%;
+    display: flex;
+}
+
+.cardContent {
+    background-color: #00123456;
+}
+
+.changeCityButton {
+    display : flex;
+    float: right;
+    margin-top: 5px;
+}
+
+.listItem {
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.leftContent {
+    width : 10%
+}
+
+.centerContent {
+    width: 70%;
+}
+
+.rightContent {
+    width: 20%;
+}
+
+.changeCityBtn {
+    margin-right: 10px;
+}
+
+.lItemCover {
+    margin-bottom: 8px;
+}
+
+.cityNameInput {
+    width: 100%;
+    color: aliceblue;
+}
+
+.changeCityPanel {
+    margin-top: 10%;
+}
+
+.cityChangeButton {
+    margin-top: 5%;
+    display: flex;
+}
+
+.changeBtn {
+    width: 49%;
+}
+
+.cancelBtn {
+    width: 49%;
+}
+
+.space {
+    width: 2%;
+}
+
+.progressBarView {
+    margin-top: 25%;
+    margin-left: 45%;
+    margin-bottom: 10%;
+}
+
+.progressText {
+    text-align: center;
+}
+
+.listItemImage {
+    width: 40px;
+    height: 40px;
+}
+
+.gridStyle {
+    flex-grow: 1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    color: aliceblue;
+}
