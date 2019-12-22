@@ -93,11 +93,11 @@ function customListItemView(pText, sText, rText, imageUrl){
                     <img src={imageUrl} alt="pImage" className="listItemImage"/>
                 </div>
                 <div className="centerContent">
-                    <div> <p> {pText} </p> </div>
-                    <div> <p> {sText} </p> </div>
+                    <div> <p className="regularText"> {pText} </p> </div>
+                    <div> <p className="regularText"> {sText} </p> </div>
                 </div>
                 <div className="rightContent">
-                <h3> {rText} </h3>
+                    <p className="regularText"> {rText} </p>
                 </div>
             </div>
             <Divider/>
@@ -216,12 +216,10 @@ function currentConditionsView(data, panelViewCB, refreshCB){
     }
     const locationData = 
         <div>
-        <div> <h2>{data.city} </h2> </div>
-        <List component="nav" aria-label="main mailbox folders">
-            <ListItem>
-                <ListItemText primary={data.currentTime}/>
-            </ListItem>
-        </List>
+            <div> <p className="semiBoldText">{data.city} </p> </div>
+            <br></br>
+            <div> <p className="regularText">{data.currentTime} </p></div>
+            <br></br>
         </div>;
 
     const view = 
@@ -400,7 +398,7 @@ function forecastTabsView(cIndex, forecastData, cb){
 function forecastView(cIndex, forecastData, cb){
     const view = 
         <div>
-            <h2>Upcoming ...</h2>
+            <p className="semiBoldText">Upcoming ...</p>
             <br/>
             {forecastTabsView(cIndex, forecastData, cb)}
         </div>
@@ -418,12 +416,12 @@ function contentLayout(changeCityCB, panelViewCB, switchTabCB, cancelCityChangeC
 
     const view = 
         <div className="content">
-            <Grid container spacing={3} className="gridStyle">
-                <Grid item xs={data.xsl}>
-                    { leftPanel(data) }
-                </Grid>
-                <Grid item xs={data.xsr}> {forecastView(data.forecastTabIndex, data.forecastData, switchTabCB)} </Grid>
-            </Grid>
+            <div className="lPanel">
+                { leftPanel(data) }
+            </div>
+            <div className="rPanel">
+                {forecastView(data.forecastTabIndex, data.forecastData, switchTabCB)}
+            </div>
             {showEmptyCityNameWarning(data.showNoCityInputWarning)}
         </div>
     return view;
@@ -539,21 +537,11 @@ class Dashboard extends React.Component {
     }
 
     componentDidMount() {
-        var xsl, xsr;
-        if(window.screen.width < 800) {
-            xsl = 12;
-            xsr = 12;
-        } else {
-            xsl = 4;
-            xsr = 8;
-        }
         document.getElementById('parentBody').style.background = "#006064";
         fetchWeatherData(this.state.city, "current", this.updateCurrentConditions);
         fetchWeatherData(this.state.city, "forecast", this.updateForecastData);
         this.setState(state => ({
-            currentTime : Date(),
-            xsl: xsl,
-            xsr: xsr
+            currentTime : Date()
         }));
     }
 

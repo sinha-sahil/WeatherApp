@@ -134,8 +134,33 @@
     height: 40px;
 }
 
-.gridStyle {
-    flex-grow: 1;
+.lPanel {
+    width: 30%;
+    margin-right: 4%;
+}
+
+.rPanel {
+    width: 66%;
+}
+
+@media(max-width: 600px){
+    .content {
+    	flex-direction: column;
+  	}
+    .lPanel {
+    	width : 100%;
+    }
+    .rPanel {
+        margin-top : 5%;
+    	width : 100%;
+    }
+    .regularText {
+        font-size: 12px;
+    }
+    .listItemImage {
+        width: 20px;
+        height: 20px;
+    }
 }
 
 * {
