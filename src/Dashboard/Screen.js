@@ -439,6 +439,7 @@ function fetchWeatherData(city, dataType, cb) {
 
 function updateBackground(currentConditions){
     var weather = currentConditions.weather[0].main.toLowerCase();
+    document.getElementById('parentBody').style.backgroundRepeat = "no-repeat";
     var gradient = "";
     if(weather === "fog" || weather === "mist" )
         gradient = "linear-gradient(180deg, #26383e 0%, #62787c 90%)";
